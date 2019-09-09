@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#24a1f5"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logolokasi"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/backgroundicon"
+            android:padding="20dp"
+            android:src="@drawable/ic_location" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="100dp"
+            android:layout_height="5dp"
+            android:layout_above="@+id/bottomtext"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/progressbar" />
+
+        <TextView
+            android:id="@+id/bottomtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomtext2"
+            android:layout_centerInParent="true"
+            android:text="Temukan lokasi menarik di sekitar mu."
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/bottomtext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:text="Location Based - Augmented Reality"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <com.google.ar.sceneform.ArSceneView
+        android:id="@+id/scenelokasi"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top"
+        android:visibility="gone" />
+
+    <!--<Button-->
+    <!--android:id="@+id/button"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="pencet"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:visibility="gone"/>-->
+</RelativeLayout>
